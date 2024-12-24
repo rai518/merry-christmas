@@ -8,7 +8,7 @@
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      background-image: url('pic/bg.png'); /* Add background image */
+      background-image: url('pic/bg.png'); 
       background-size: cover; 
       background-position: center; 
     }
@@ -51,25 +51,13 @@
     button.zoom {
       animation: zoom 1s ease-in-out;
     }
-  </style>
-</head>
-<body>
-  <script>
-    setInterval(() => {
-      const button = document.querySelector('button');
-      button.classList.add('shake');
-      button.classList.add('zoom');
-      setTimeout(() => {
-        button.classList.remove('shake');
-        button.classList.remove('zoom');
-      }, 500); 
-    }, 1000); 
 
-    const button = document.querySelector('button');
-    button.addEventListener('click', () => {
-      window.location.href = "christmas.html"; 
-    });
-  </script>
-  <button>Merry Christmas</button>
-</body>
-</html>
+    /* Responsive adjustments for smaller screens */
+    @media (max-width: 768px) { 
+      button {
+        padding: 10px 20px; 
+        font-size: 16px; 
+      }
+    }
+  </style>
+</

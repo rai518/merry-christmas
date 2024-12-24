@@ -52,7 +52,6 @@
       animation: zoom 1s ease-in-out;
     }
 
-    /* Responsive adjustments for smaller screens */
     @media (max-width: 768px) { 
       button {
         padding: 10px 20px; 
@@ -60,4 +59,24 @@
       }
     }
   </style>
-</
+</head>
+<body>
+  <script>
+    setInterval(() => {
+      const button = document.querySelector('button');
+      button.classList.add('shake');
+      button.classList.add('zoom');
+      setTimeout(() => {
+        button.classList.remove('shake');
+        button.classList.remove('zoom');
+      }, 500); 
+    }, 1000); 
+
+    const button = document.querySelector('button');
+    button.addEventListener('click', () => {
+      window.location.href = "christmas.html"; 
+    });
+  </script>
+  <button>Merry Christmas</button>
+</body>
+</html>
